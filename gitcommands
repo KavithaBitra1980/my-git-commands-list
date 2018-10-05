@@ -729,3 +729,4 @@
   729  cp git-project1 .
   730  history
   731  history >> gitcommands
+  git pull remote
