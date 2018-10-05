@@ -1,0 +1,731 @@
+    1  su
+    2  sudo apt-get install git
+    3  sudo yum install git
+    4  git --version
+    5  man uname
+    6  uname
+    7  man git
+    8  man uname -all
+    9  man uname -a
+   10  uname -a
+   11  ls
+   12  ls .git/
+   13  clear
+   14  mkdir git-project1
+   15  ls
+   16  rm -r git-project1
+   17  ls
+   18  git init git-project1
+   19  ls -al
+   20  ls -al git-project1/
+   21  pwd
+   22  ls -al .git
+   23  ls -al git-project1/.git
+   24  git init --bare test-git.git
+   25  ls -al test-git.git/
+   26  cat config
+   27  cd test-git.git/
+   28  cat config
+   29  cat ../git-project1.git/config
+   30  cd ..
+   31  ls -al git-project1.git
+   32  ls -al git-project1
+   33  ls -al .git
+   34  cd .git
+   35  cd ..
+   36  ls
+   37  pwd
+   38  ls
+   39  pwd
+   40  ls
+   41  ls -al git-project1/
+   42  ls -al git-project1/.git
+   43  cat git-project1/.git/config
+   44  cat test-git.git/.git/config
+   45  ls -al test-git.git/
+   46  cat test-git.git/config
+   47  cd git-project1/
+   48  ls
+   49  ls -al
+   50  cd ..
+   51  cd test-git.git/
+   52  ls
+   53  cd ..
+   54  pwd
+   55  ls
+   56  rm -rf test-git.git/
+   57  ls
+   58  clear
+   59  git config --global user.name "kavithabitra1980"
+   60  git config --global user.email "kavithabitra1980@gmail.com"
+   61  fir config --list
+   62  git config --list
+   63  git init fake-project1
+   64  cd fake-project1/
+   65  ls
+   66  ls -al
+   67  git config user.name"kkexample"
+   68  git config --list
+   69  git config user.name "kkexample"
+   70  git config --list
+   71  git config user.email "kkexample"
+   72  git config --list
+   73  cd ..
+   74  git config --list
+   75  git config user.email
+   76  git config --core.editor "/usr/bin/vim"
+   77  git config --global core.editor "/usr/bin/vim"
+   78  git config --list
+   79  pwd
+   80  ls
+   81  cd git-project1/
+   82  ls
+   83  cat .git/index
+   84  git status
+   85  ls
+   86  pwd
+   87  vim readmefile
+   88  ls
+   89  cat .git/index
+   90  cat .git/readmefile
+   91  cat readmefile
+   92  git add
+   93  git status
+   94  mkdir src
+   95  git add src
+   96  git status
+   97  vim hi-there.cpp
+   98  cat hi-there.cpp 
+   99  mv hi-there.cpp src/
+  100  pwd
+  101  git add src/hi-there.cpp 
+  102  git status
+  103  git add .
+  104  git status
+  105  touch src/.keep
+  106  git add .
+  107  git status
+  108  git rm src/.keep
+  109  git rm -f src/.keep
+  110  git status
+  111  ls
+  112  cd src
+  113  ls
+  114  touch src/.keep
+  115  cd ..
+  116  pwd
+  117  ls
+  118  touch src/.keep
+  119  ls
+  120  ls -al
+  121  git add .
+  122  ls
+  123  cd src
+  124  ls
+  125  ls -al
+  126  cd ..
+  127  ls
+  128  git rm -f src/.keep
+  129  cd src
+  130  ls -al
+  131  touch LICENCES
+  132  ls
+  133  git status
+  134  git status -s
+  135  git add LICENCES 
+  136  git status -a
+  137  git status -s
+  138  echo "this is a new licences" >> LICENCES 
+  139  git status
+  140  git status -s
+  141  git status -v
+  142  git add LICENCES 
+  143  git status
+  144  git status -s
+  145  git status -v
+  146  clear
+  147  git commit
+  148  cat .git/COMMIT_EDITMSG
+  149  cd ..
+  150  ls
+  151  pwd
+  152  cat .git/COMMIT_EDITMSG 
+  153  git log
+  154  ls .git/objects/
+  155  ls .git/objects/80
+  156  echo "this is a changelog" >> ChnageLog
+  157  git status
+  158  git commit -m "second"
+  159  git status
+  160  git status -s
+  161  git add .
+  162  git status
+  163  git commit -m "third"
+  164  git status
+  165  git rm --cached ChnageLog 
+  166  ls
+  167  git status
+  168  git staus -s
+  169  git status -s
+  170  git commit -m
+  171  git commit -m "delete changelog file"
+  172  git status
+  173  git status -s
+  174  git add .
+  175  echo " put notes there" << ChnageLog 
+  176  >> ChnageLog 
+  177  fit status
+  178  git status
+  179  git status -s
+  180  ls
+  181  cat ChnageLog 
+  182  echo "lets make commit to the change log" >> ChnageLog 
+  183  git status
+  184  git status -s
+  185  git commit -a -m "changelog back"
+  186  echo "this is file 1" >>file1
+  187  echo "this is file 2">> file2
+  188  ls
+  189  git status -s
+  190  git add .
+  191  git status
+  192  git rm --cached file1
+  193  git status -s
+  194  git commit -a -m "both"
+  195  git status
+  196  git status -s
+  197  git rm --cached file2
+  198  git status
+  199  git status -s
+  200  git commit -m "third"
+  201  git status
+  202  git status -s
+  203  git status -a -m "4"
+  204  git commit  -a -m "4"
+  205  git status -s 
+  206  git status -s
+  207  echo "this is third file" >>file 3
+  208  git add file3
+  209  git add file 3
+  210  git add file
+  211  ls
+  212  cat file
+  213  git status -s
+  214  echo "kavitha lines" >> file
+  215  git status
+  216  git status -s
+  217  git commit -a -m "modified"
+  218  git status -s
+  219  git commit -m "both file"
+  220  git commit -a -m "new"
+  221  git add .
+  222  echo "few more lines" >> file2
+  223  git commit -a -m "noadd"
+  224  git status -s
+  225  git rm -rf file file1 file2
+  226  ls
+  227  echo "this is file 1" >>file1
+  228  echo "this is file2">>file2
+  229  git status
+  230  git status -s
+  231  git commit -m "marked for deletetion"
+  232  git status -s
+  233  git add file
+  234  git add file1
+  235  git status -s
+  236  echo "this is kavitha1" >>file1
+  237  git add file2
+  238  git commit -a -m "both"
+  239  git status -s
+  240  clear
+  241  mkdir build
+  242  touch .gitignore
+  243  git add .gitignore
+  244  git commit -m .gitignore
+  245  git status -s
+  246  echo "build/*" .gitignore
+  247  echo "build/*">> .gitignore
+  248  git status -s
+  249  git commit -a -m "gitignore"
+  250  git status
+  251  git -o build/hi-there src/hi-there.cpp
+  252  g++ -o build/hi-there src/hi-there.cpp
+  253  ls build
+  254  ls build/
+  255  git status
+  256  g++ -o build/hi-there src/hi-there.cpp
+  257  ls
+  258  cd sec
+  259  cd src
+  260  ls
+  261  cd ..
+  262  pwd
+  263  ls
+  264  ls build/
+  265  g++ -0 build/hi-there
+  266  g++ -o build/hi-there
+  267  git -o build/hi-there
+  268  cd build
+  269  touch fil10 file12
+  270  cd ..
+  271  ls
+  272  git status
+  273  cd build
+  274  ls
+  275  git status
+  276  cd ..
+  277  mkdir testdir
+  278  cd test dir
+  279  cd testdir/
+  280  touch a b c
+  281  cd ..
+  282  git status
+  283  git staus build/
+  284  git status build/
+  285  vim ChnageLog 
+  286  ls
+  287  git status
+  288  echo *~ >> .gitignore
+  289  git status
+  290  git add testdir/
+  291  git commit -m "adding testing for commit"
+  292  git status
+  293  git commit -a -m "changelog and gitignore"
+  294  git status -s
+  295  git check-ignore
+  296  git check-ignore build
+  297  git check-ignore *~
+  298  git check-ignore build/
+  299  clear
+  300  git tag -a v0.1 -m "initial release for this project"
+  301  git tag
+  302  git show
+  303  git status -s
+  304  git log
+  305  ls .git/objects
+  306  cat .git/objects/pack
+  307  git show
+  308  git diff
+  309  git tag -a v0.1 -m "hot fixes"
+  310  git tag -a v0.12 -m "hot fixes"
+  311  git taf
+  312  git tag
+  313  git show v0.12
+  314  git show 
+  315  clear
+  316  git show
+  317  git show v0.12
+  318  touch afile
+  319  echo "this is 1">> afile
+  320  git add afile
+  321  git status -s
+  322  echo "this is 2" >>afile
+  323  cat afile
+  324  echo "this is 3" >>afile
+  325  echo "this is 4" >>afile
+  326  git status
+  327  git status -s
+  328  git commit -a -m "aal at shot"
+  329  git add --cached
+  330  git status -s
+  331  git rm --cached
+  332  git rm --cached afile
+  333  git status
+  334  git status -s
+  335  git commit -a -m "delete"
+  336  git status -s
+  337  git tag v0.234 -m "formy sake"
+  338  git show
+  339  git ./git/objects/b2
+  340  git .git/objects/b2
+  341  ls .git/objects/b2
+  342  cat .git/objects/b2
+  343  git tag
+  344  git tag -d v0.234
+  345  git tag
+  346  git show
+  347  git show v0.1
+  348  git show v0.12
+  349  git show
+  350  ls .git/objects
+  351  ls .git/objects/pack
+  352  ls -al .git/objects/pack
+  353  git status
+  354  git commit -m file
+  355  clear
+  356  git branch development
+  357  git status
+  358  git commit -m "aal"
+  359  git commit -a -m "all"
+  360  git add .
+  361  git status
+  362  git commit -m "all"
+  363  git status
+  364  git log --oneline --decorate
+  365  git branch -d development
+  366  git log --oneline
+  367  git log --oneline --decorative
+  368  git log --oneline --decorate
+  369  git branch development
+  370  git log --oneline -- decorate
+  371  git log --oneline --decorate
+  372  git checkout development
+  373  git status
+  374  git brach newdev
+  375  git branch newdev
+  376  git log --oneline --decorate
+  377  git checkout newdev
+  378  git log --oneline --decorate
+  379  git status
+  380  git branch -d newdev
+  381  git checkout development
+  382  git branch -d newdev
+  383  git status
+  384  ls
+  385  echo "new features for our changeLog" >> ChnageLog
+  386  git commit -a -m "adding new features to ChangeLog"
+  387  git status
+  388  vim ChnageLog
+  389  git commit -a -m "no new changesto Change Log"
+  390  git checkout master
+  391  cat ChnageLog
+  392  git checkout development
+  393  cat ChnageLog
+  394  touch "creating a new file" >> firstfile
+  395  git add .
+  396  git status
+  397  git commit -m "mistakenly 2 files"
+  398  git status
+  399  git rm -rf creating\ a\ new\ file 
+  400  git commit -m "deleteing the file name creating a new file"
+  401  git status
+  402  echo "my name is kavitha and i have created this file" >>firstfile
+  403  git status
+  404  git status -s
+  405  git checkout master
+  406  git status
+  407  git add .
+  408  git status
+  409  git checkout master
+  410  git commit -m "checkout changes"
+  411  git status
+  412  git checkout master
+  413  ls
+  414  cat ChnageLog
+  415  cat .git/head
+  416  cat .git/HEAD
+  417  cat .git/refs/heads/master
+  418   git log --oneline --decorate
+  419  git status
+  420  ls
+  421  git merge development
+  422  git status
+  423  git .git/HEAD
+  424  cat .git/HEAD
+  425  cat .git/refs/heads/master
+  426  git log --oneline --decorate
+  427  cat .git/objects
+  428  ls .git/objects
+  429  clear
+  430  git branch trail1
+  431  git branch trail2
+  432  git checkout trail1
+  433  echo "stuff" >> info.txt
+  434  git add info.txt
+  435  git commit -m "adding stuff info.txt file"
+  436  git checkout trail2
+  437  git log --oneline --decorate
+  438  echo "things" >> info.txt
+  439  git add info.txt
+  440  git commit -m "adding things to info.txtx"
+  441  git status
+  442  git checkout trail1
+  443  git merge trail2
+  444  git status
+  445  vim info.txt
+  446  git status
+  447  git add info.txt
+  448  git commit -m "added stuff and things into info.txt"
+  449  git merge trail1
+  450  cat infor.txt
+  451  cat info.txt
+  452  git branch -d trail2
+  453  git log --oneline --decorate
+  454  history
+  455  git log --oneline --decorate
+  456  git status
+  457  git checkout deve
+  458  git checkout development
+  459  ls
+  460  vim readmefile 
+  461  git add  readmefile
+  462  git commit -m "readmefile for rebase1"
+  463  git status
+  464  git status -s
+  465  git checkout master
+  466  git rebase development
+  467  ls
+  468  cat readmefile 
+  469  git checkout development
+  470  vim readmefile 
+  471  git add .
+  472  git commit -m "rebase 2"
+  473  vim readmefile 
+  474  git add .
+  475  git commit -m "rebase 3"
+  476  vim readmefile 
+  477  git add .
+  478  git commit -m "rebase 4"
+  479  git status
+  480  git checkout master
+  481  git merge development
+  482  cat ream
+  483  cat readmefile 
+  484  git log
+  485  git checkout development
+  486  vim readmefile 
+  487  git add .
+  488  git commit -m "rebase5"
+  489  vim readmefile 
+  490  git add .
+  491  git commit -m "rebase6"
+  492  vim readmefile 
+  493  git add .
+  494  git commit -m "rebase7"
+  495  git status
+  496  git checkout master
+  497  git rebase development
+  498  git log
+  499  clear
+  500  git status
+  501  echo "fkakashaheaeiyaiodczshckjzhxk">>readmefile 
+  502  git -a -m "added som junk to check revert"
+  503  git commit -a -m "added som junk to check revert"
+  504  cat readmefile 
+  505  git revert HEAD
+  506  git status
+  507  git log
+  508  cat readmefile 
+  509  git log --oneline
+  510  git revert HEAD~6
+  511  git status
+  512  git revert --abort
+  513  git status
+  514  git log --oneline
+  515  git revert HEAD~2
+  516  git log --oneline
+  517  git revert HEAD~3
+  518  git log --oneline
+  519  git diff
+  520  echo "adding lines to test diff command" >>readmefile 
+  521  git diff
+  522  echo "adding lines to test git diff " >>ChnageLog
+  523  git diff
+  524   git diff HEAD^ HEAD
+  525  git log --oneline --decorate
+  526  git diff 164138f c5fa7fe 
+  527  git diff HEAD^ HEAD
+  528  git diff --summary 164138f b939a20 
+  529  git gc
+  530  git config gc.pruneexpire "45 days"
+  531  ls
+  532  git log
+  533  git
+  534  git --version
+  535  ls
+  536  git log --oneline --decorate
+  537  cd git-project1/
+  538  ls
+  539  git log
+  540  clear
+  541  log log --graph
+  542  git log --graph
+  543  git log -s build
+  544  git log --since="1 days ago"
+  545  git log --since='5 hours ago"
+  546  '
+  547  git log --since="5 hours ago"
+  548  git log --since="60 minutes"
+  549  git log --since="2018-5-10"
+  550  git log -S line
+  551  git log -S kavitha
+  552  cd .git/objects/72
+  553  cd .git/objects/
+  554  ls .git/objects/
+  555  git .git/objects
+  556  ls .git/objects
+  557  ls .git/objects/92
+  558  history
+  559  history >> touch gitcommands.txt
+  560  history >> echo "all executed commands" >> gitcommands.txt
+  561  cat .git/objects
+  562  cat .git/COMMIT_EDITMSG
+  563  cd git-project1/
+  564  cat .git/COMMIT_EDITMSG
+  565  ls .git/objects/
+  566  git status
+  567  git commit -a -m "new commits on changelog and readmefile"
+  568  git status
+  569  ls .git/objects
+  570  ls -al .git/objects
+  571  cd .git/objects/19
+  572  ls
+  573  ls -al
+  574  cat 19
+  575  git log --oneline --decorate
+  576  git log --stat
+  577  git
+  578  git log --pretty:format:"%h -%an -%ar -%s"
+  579  git log --pretty=format:"%h - %an - %ar - %s"
+  580  git log -10
+  581  git log --use-mailmap
+  582  git log -s
+  583  git log --oneline --decorate
+  584  git status
+  585  git show
+  586  clear
+  587  git show
+  588  git tag
+  589  git checkout v0.12
+  590  git checkout --tag v0.12
+  591  git tag -a -m v2.1 "new release"
+  592  git tag -a -m v2.1 "new release-early check"
+  593  git tag -a -m v2.1
+  594  git tag -a v2.1 -m"earlycheck"
+  595  git tag
+  596  git show v2.1
+  597  git tag
+  598  git show v0.12
+  599  git log --oneline --decorate
+  600  git diff --summary ddabd0b c5fa7fe 
+  601  git diff --summary ddabd0b 18933d9 
+  602  ls
+  603  pwd
+  604  cd ..
+  605  cd..
+  606  pwd
+  607  cd ..
+  608  pwd
+  609  cd ..
+  610  pwd
+  611  ls
+  612  git tag
+  613  git checkout v0.12
+  614  echo "please create a file for me for a web application" >>newapp
+  615  vi newapp
+  616  git add newapp
+  617  git commit -m newapp
+  618  git tag -a v3.01 -m "new app alication has created"
+  619  git tag
+  620  git log --oneline
+  621  git diff --summary 9024fd8 7dcc509
+  622  git log 9024fd8 
+  623  git log --stat
+  624  git log 9024fd82fa2c26f9cbb39d58a855f1f42835c6a9
+  625  echo " annanya is my life" >>newapp 
+  626  git commit -a -m "annanya is added to newapp"
+  627  git log -2
+  628  git diff 9b3fc0f65 9024fd82
+  629  git diff --summary 9b3fc0f65 9024fd82
+  630  git log --summary 9b3fc0f65 9024fd82
+  631  git log --oneline
+  632  git diff --summary 9b3fc0f 9024fd8 
+  633  git diff --summary 9b3fc0f ca9fe86 
+  634  git diff --summary 9b3fc0f 65b064f 
+  635  git
+  636  clear
+  637  git clone git-project git-project-local-clone-repo-test
+  638  git clone git-project1 git-project-local-clone-repo-test
+  639  cd ..
+  640  git clone git-project1 git-project-local-clone-repo-test
+  641  ls
+  642  cd git-project-local-clone-repo-test/
+  643  ls
+  644  cat newapp
+  645  git branch clonetest-branch
+  646  git checkout clonetest-branch
+  647  ls
+  648  echo " this is a test test this newly cloned repository">>newapp
+  649  cat newapp
+  650  git commit -a -m "adding lines to a lones version"
+  651  git log
+  652  git log 
+  653  git log 1
+  654  git log --1
+  655  git log -1
+  656  git checkout master
+  657  git status
+  658  cd ..
+  659  ls
+  660  cd git-project1
+  661  ls
+  662  git status
+  663  git copy ~./git-project-local-clone-repo-test/
+  664  git --help
+  665  cd ..
+  666  cd git-project-local-clone-repo-test/
+  667  git log --oneline --decorate
+  668  ls
+  669  git status
+  670  ls
+  671  git checkput clonetest-branch
+  672  git checkout clonetest-branch
+  673  ls
+  674  git status
+  675  git checkout master
+  676  git status
+  677  git merge clonetest-branch
+  678  ls
+  679  cat newapp
+  680  clean
+  681  ssh-keygen
+  682  cat  /home/user/.ssh/id_rsa.pub
+  683  clear
+  684  git clone git@github.com:linuxacademy/content-souce-control-git.git
+  685  ls
+  686  git clone git@github.com:linuxacademy/content-source-control-git.git
+  687  ls
+  688  git remote
+  689  git remote -v
+  690  cd ..
+  691  cd git-project
+  692  cd git-project1
+  693  ls
+  694  cd ..
+  695  git clone git@hithub.com:linuxacademy/content-source-control-git.git
+  696  git clone git@github.com:linuxacademy/content-source-control-git.git
+  697  ls
+  698  cd content-source-control-git/
+  699  ls
+  700  git remote
+  701  git remote -v
+  702  git remote show
+  703  git remote show origin
+  704  git fetch origina
+  705  git fetch origi
+  706  git fetch origin
+  707  git pull
+  708  ls
+  709  git branch reasme-updates
+  710  git checkout reasme-updates
+  711  git checkout master
+  712  git branch -d reasme-updates
+  713  git branch readme-updates
+  714  git checkout readme-updates
+  715  ls
+  716  cat README.md
+  717  echo "addinga new readme line from kavitha to tell that i am updating pushing to git hub" >>README.md
+  718  git commit -a -m "addred few lines to README.md"
+  719  git push -u origin readme-updates
+  720  cd ..
+  721  git init 
+  722  ls
+  723  git init git-commands
+  724  ls
+  725  cd git-commands
+  726  ls
+  727  ls -al
+  728  copy git-project1 .
+  729  cp git-project1 .
+  730  history
+  731  history >> gitcommands
